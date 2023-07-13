@@ -246,27 +246,3 @@ Weather storys can return cached URLs.  If we're trying to force load up a url, 
 Listens via a proxy on the setter and will update the object update time with any property changes.
 
 **Kind**: instance method of [<code>Story</code>](#Story)
-
-
-
-
-## Additional Options
-The library does provide a few extra options depending on your use case.  These options are passed as a an object as the second argument to the methods listed above.
-
-#### Default Values
-
-
-#### Receipts
-The majority of the time most applications can send DSS Builder content using the standard methods and expect it made it.  However, there may be times when a developer wants to wait to send a followup message or verify that a message has arrived. In those situations, you can use the `receipt: true` option to convert your method call into a resolvable promise.
-
-Example:
-```js
-function success(){
-	console.log('Image Succesfully Sent')
-}
-
-let options = { receipt: true };
-Post2DSSBuilder.image(image, options)
-	.then(success)
-	.catch((error) => { throw new Error(error) });
-```
