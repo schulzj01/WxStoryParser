@@ -1,0 +1,35 @@
+{
+  "name": "wxstoryparser",
+  "version": "1.0.0",
+  "description": "JavaScript library that will read in WxStorys and spit out a plain old js object",
+  "main": "./dist/WxStoryParser.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schulzj01/WxStoryParser"
+  },
+  "keywords": [],
+  "author": "Jeremy.Schulz@noaa.gov",
+  "scripts": {
+    "start": "webpack serve --mode=development --env development ",
+    "build": "webpack --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "precommit": [
+    "build"
+  ],
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "engine": {
+    "node": ">= 4.0.0"
+  },
+  "license": "MIT",
+  "pre-commit": [],
+  "dependencies": {
+    "fast-xml-parser": "^4.2.5",
+    "lodash.merge": "^4.6.2"
+  }
+}
