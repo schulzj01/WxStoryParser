@@ -1,0 +1,13 @@
+<html><head><style></style><script>window.addEventListener("DOMContentLoaded", () => {
+				let wfos = ['pih','boi','tfx','slc'];
+				let wxStoryParser = new WxStoryParser(wfos)
+					.loadAll()
+					.then((wxStorys) => {
+						wfos.forEach(wfo => {
+							let activeAndScheduledStorys = wxStorys[wfo].getActiveAndScheduledStorys();
+							activeAndScheduledStorys.forEach(story => {
+								console.log(story.Office, story.getFullImageFullUrl())
+							})
+						})
+					});
+			});</script><script defer="defer" src="WxStoryParser.js"></script></head><body></body></html>
